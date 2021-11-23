@@ -1,5 +1,5 @@
 # K8S
-#--- scale out
+scale out
 kubectl scale deploy nginx --replicas=3
 
 --- image change
