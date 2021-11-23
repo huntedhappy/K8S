@@ -2,26 +2,26 @@
 ### scale out
 kubectl scale deploy nginx --replicas=3
 
---- image change
+### image change
 kubectl set image deploy nginx nginx=nginx:latest
 
---- autoscale
+### autoscale
 kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
 
---- autosclae check
+### autosclae check
 kubectl get hpa
 
---- label 
+### label 
 kubectl label deploy nginx test=test
 
---- label check
+### label check
 kubectl get deploy nginx --show-labels
 
---- annotation
+### annotation
 kubectl annotate deploy nginx test=tesst
 
---- annotation check
+### annotation check
 kubectl get deploy nginx -o jsonpath={.metadata.annotations}
 
---- pause
+### pause
 kubectl rollout pause deploy nginx
