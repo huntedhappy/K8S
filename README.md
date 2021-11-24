@@ -6,6 +6,7 @@ kubectl scale deploy nginx --replicas=3
 kubectl set image deploy nginx nginx=nginx:latest
 
 ### autoscale
+https://kubernetes.io/ko/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/
 kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
 
 ### autosclae check
